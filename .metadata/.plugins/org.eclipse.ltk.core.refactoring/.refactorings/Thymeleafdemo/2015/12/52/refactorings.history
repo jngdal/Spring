@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Thymeleafdemo/src/main/resources/templates/Collection.html&apos; to &apos;collection.html&apos;" description="Rename resource &apos;Collection.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/Collection.html" name="collection.html" stamp="1450946739578" updateReferences="true"/>
+</session>

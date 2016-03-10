@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="homeApp">
+<head>
+<meta charset="UTF-8" />
+<title>Manager Friend</title>
+<th:block th:include="fragments/headerinc :: head"></th:block>
+
+<!-- <script type="text/javascript"
+	th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script> -->
+<link th:href="@{/css/home.css}" rel="stylesheet"></link>
+<link th:href="@{/css/chat/style.css}" rel="stylesheet"></link>	
+<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular.js}"></script>
+<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-resource.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-resource.js}"></script>            
+<script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js}"></script> 
+<script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js}"></script>         
+            
+   
+   <script type="text/javascript" th:src="@{/angularjs/home/app.js}"></script>
+   <script type="text/javascript" th:src="@{/angularjs/home/controllers.js}"></script>
+   <script type="text/javascript" th:src="@{/angularjs/home/services.js}"></script>
+
+
+
+
+
+</head>
+<body ng-controller="HomeController" >
+	<input type="hidden"  th:value="${_csrf.token}" id="csrf"/>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container" >
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="navbar-form">
+						<div class="chaticon friend" ng-click="friend()">
+						
+						</div>
+
+					</li>
+
+					<li class="navbar-form">
+						<div class="chaticon mail" ng-click="message()"></div>
+
+					</li>
+					
+					<li class="navbar-form">
+					
+					  <div class="btn-group" uib-dropdown>
+					      <a id="single-button"  uib-dropdown-toggle>
+					        <span class="caret"></span>
+					      </a>
+					      <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+					        <li role="menuitem"><a href="#">Setting</a></li>					       
+					        <li class="divider"></li>
+					        <li role="menuitem"><a data-ng-click=logout()>LogOut</a></li>
+					      </ul>
+					  </div>
+					
+					
+					</li>
+
+				</ul>
+				<form class="navbar-form navbar-right">
+					<input type="text" class="form-control" placeholder="Search...">
+				</form>
+
+			</div>
+
+        
+
+
+		</div>
+	</nav>
+
+	<section class=" container"  uib-collapse="isCollapsedfriend" style="position: relative;">	
+
+			<div class="col-md-6 col-md-offset-6 well" style="z-index: 1040; position: absolute;left:-1%;">dsafasfafadsafjkakjfa dsfklafklaklf
+				dsfaklllllllllllllllllllll dfsaklklklklklklklklklklklklklklklkl</div>
+		
+	</section>
+	<section class=" container"  uib-collapse="isCollapsedmessage" style="position: relative;">	
+
+			<div class="col-md-6 col-md-offset-6 well" style="z-index: 1040; position: absolute;left:-1%;">
+			mail
+			
+			</div>
+		
+	</section>
+
+
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12">
+
+
+				<h1 class="page-header textcenter text-success">Suggest to
+					Friends</h1>
+
+				<div class="row textcenter">
+
+					<div class="col-xs-6 col-sm-3 col-md-3">
+						<img
+							src="data:image/png;base64,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"
+							width="200" height="200" class="img-responsive img-circle"
+							alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+						<button class="glyphicon glyphicon-plus"></button>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3">
+						<img
+							src="data:image/png;base64,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"
+							width="200" height="200" class="img-responsive"
+							alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+						<button class="glyphicon glyphicon-plus"></button>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3">
+						<img
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAAA3NCSVQICAjb4U/gAAAHK0lEQVR4nO2c3W9URRTAZ+bu3bvsV3e77LbsAkvbtNotNJQPWz8agaBBY0CiRsOLkJhoYuKbz/wB/gsmhhdiolFRY4gSIYpKNRYsaQvFllbZ2naBQrctu3vvzPhQ5CPUstudOXOt83tq0/acs79M586de+bitz7oQhr5ENUF/F/QooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHQooHwqC6gAvzecCK81kNMhJDD7KmZK/OlGdVFlYvbRYd80Y70zmS0MRqoMw0v55wjjhDCCGOMbVqanpscnx45O3YyX5hWXexSuFd0Y6J9e8MzdTXrGaOMM464TYsP/BauDdSvDiY3p5+evPnHL5e/GZnqU1BrGWAXtu0GrPALm9+oq0k71OaIlflXGBGPYU7eHPvy3PtzRddNKca2F9eqruE+OtI79na86bdClNkI8Ur+lDNOA1ZNR3qnTYsTN0clVbg83CV6d9uBbQ27HWbzyhTfhSPOEWuIbwz5akdy58WWVw0uWt7t2fR6JtW52ERcMTYtZlKdeza9Xn0oUbhF9FMt+1rWbBFieQGbFlvWbHmqZZ+ogFXiCtEN8bYtG3YJtLyATYtbNuxqiLeJDbs8XCF6d9sBm5ZkRLZpaXfbARmRK0W96J2tr1imv8IFRvlwy/TvbH1FTvAKUC+6NdlJmSMvPmVOa7JTXvwyUSz6yea9BBNpw3kBTjB5snmvzBQPR7HopkQ74+Xe+y0bxllTol12lqVRKdpn+iOBePk32cuGIxYJxH2mX3aiJVApOpPqAhjOCzDOMimVuzoqRceCSc6lzs534ZzHgkmYXIuiUnTIF5V8GbwXHvJFoXItgkrRXo8FOaK9Hgsm16KoXXXgFZ3uPtSKBps3lKS7D5WiS04RY6BRhjEuOYI3rSpCpeh8YRrw3xmrfXqrUvS12XHIEX1tdhwm16KoFD2QPUMwUAEEk4HsGZhcixegMHfBnr8xl8Pya8CI3JjLFex52YmWQPGm0vBUH8CgJpgMq+73UCz6h0ufM84kXxIx4+yHS5/LTPFw1G/8D473GERiw5RBPIPjPfLil4l60ScHPyra89IGNS7a8ycHP5ITvALUi0YIneg/ahpeGZFNw3ui/6iMyJXiCtGXc/29o9+ahuBNH9Oweke/vZzrFxt2ebhCNELo9NCxob96Bbo2DWvor97TQ8dEBawSt4hGCB0/f2Qg2yPEtWlYA9me4+ePVB9KFO5qchzJnS85hXSsFWO8vD5Hgg2CjdNDx3689IXw8qrBdY3oZ8dODU306v5oCGxa7M/+lMuPRwOJ8KoYXmrlhzEiBjY8hpnLZ09d+Pj00GfCe/iE4LoRfYeRqb6Rqb77z7BYD55huT43oc+wCCBfmP7u4icLX+tTWUDMl2ZGrw6ormKZuGh5t7LRooHQooHQooHQooHQooHQooHQooFw9Q1LenWmNlAX8kVWeYM+M2gaXo9h3vmpQ22blgr27K3SbL5w4/rc5JiLb2dcJLo2WL9hdVs8lIoG6sKran2m//bOxu3eXo4QurfN958uJ4xvf4MxxgV7fubW9em5yVw+O3q1//rshIqPsgiKXyOxOpR6pH5rXU06HkpZ5irGKEeIc8YRX27z54JxghEixCjat3L57OTNsYsTv17NZwVXX1FZSkQ313U0129ORhr9VpgxyhFnnMlpq8UEE4wwIcZ8cSY7Pfz75G+XJs9KSPSwOiBFp6JN7eu618ce9Xp8jDPGKWzPMibYIJiUnMIf1y70/fl9dnoYLDfQHL294dnW5GORQJwyyjh1mJST3w+DM+4wjggxGhPtzfUdN+Zyg+M//3L5a4Dc0kd09yP7M8lO02MxRgGOFFYERoQQw3aKA+M931/8VG4ueaK7mp7fnN7hIR4KPUVUCjaw4TDn3NipM8NfScoh5ZlhKtr00vZ3GuIbOWJuG8WLwhHDGK+rbcmkOnP5KzKeiokXvSvz6o7Wlw3iYVziOwtkwDj1Gr6Na58IWDXC+5sEXwxf63o3Hkq58zl0OXDEbFpsSz2eCK//8Mx7AiOL3Os41H04FlyjaEUhEoeVYsE1h7oPC4wpTPTB7sN+K/yfmy7+DcYdvxU+KM61GNH7t74dtGoYp0KiuQTGadCq2b/1bSHRBIjOpLrWxVroShnL90K5sy7WIuT9EwJEdzU9J+kdX27ApqWupueqj1Ot6KZEe9AXcff9SJXwoC9S/ZuCqhXdmGinbEVNzQ9CGW1ULjrij6/o4bwAj/jjVYaoVrRBPGAvN1EF57z6A3rVXwxXuOV/qPZj6qfgQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQGjRQPwNIGGGic0PaqgAAAAASUVORK5CYII="
+							width="200" height="200" class="img-responsive"
+							alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+						<button class="glyphicon glyphicon-plus"></button>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3">
+						<img
+							src="data:image/png;base64,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"
+							width="200" height="200" class="img-responsive"
+							alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+						<button class="glyphicon glyphicon-plus btn btn-success"></button>
+					</div>
+
+
+				</div>
+
+
+
+				<div class="panel panel-info main">
+					<div class="panel-heading">
+						<h2 class="sub-header textcenter panel-title">Your List
+							Friend</h2>
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped ">
+								<thead>
+									<tr>
+										<th>Full Name</th>
+										<th>Email</th>
+										<th>Adress</th>
+										<th>CellPhone</th>
+										<th>BirthDay</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+									<tr ng-repeat="friend in friends">
+										<td>{{friend.lastname+" "+friend.firstname}}</td>
+										<td>Lorem</td>
+										<td>ipsum</td>
+										<td>dolor</td>
+										<td>sit</td>
+										<td><img class="img-circle sprite connect"
+											ng-class="{'sprite connect':friend.status,'sprite disconect':!friend.status}"></img></td>
+									</tr>
+
+
+
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

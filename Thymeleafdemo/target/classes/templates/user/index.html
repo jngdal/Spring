@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-ng-app="userapp">
+<head>
+<meta charset="UTF-8" />
+
+<title>Update Detail User</title>
+	<link 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+			th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+			rel="stylesheet" media="screen" />
+	<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular.js}"></script>
+    <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-resource.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-resource.js}"></script>
+    <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-sanitize.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-sanitize.js}"></script>        
+            
+    <script src="http://cdn.jsdelivr.net/webjars/angular-translate/2.7.2/angular-translate.js"
+            th:src="@{/webjars/angular-translate/2.7.2/angular-translate.js}"></script> 
+    <script src="http://cdn.jsdelivr.net/webjars/angular-translate-loader-url/0.1.2/angular-translate-loader-url.js"
+            th:src="@{/webjars/angular-translate-loader-url/0.1.2/angular-translate-loader-url.js}"></script>               
+    <script th:src="@{/webjars/angularjs/1.4.7/angular-messages.js}"></script>        
+ 	<script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js}"></script> 
+    <script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js}"></script>         
+            
+   
+   <script type="text/javascript" th:src="@{/angularjs/user/app.js}"></script>
+   <script type="text/javascript" th:src="@{/angularjs/user/controllers.js}"></script>
+   <script type="text/javascript" th:src="@{/angularjs/user/services.js}"></script>
+   
+   
+</head>
+<input type="hidden"  th:value="${_csrf.token}" id="csrf"/>
+<body class="container" data-ng-controller="UserCtrl">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-2">
+				<img data-ng-src="/images/Hydrangeas.jpg"
+					alt="h1" class="img-rounded img-responsive" />
+			</div>
+			<div class="col-md-4">
+				<label class="form-control">Đỗ Quốc Phiêu</label> <i>Jngdal </i>
+			</div>
+
+		</div>
+
+		<div class="row well">
+			<form class="form-horizontal" data-ng-submit="updateuser()" name="userForm" novalidate>
+
+				<div class="form-group" >	
+				
+					<div class="col-md-2 col-md-offset-2">
+						<label for="firstname">{{'firstname'|translate }}</label>					
+					</div>
+					<div class="col-md-8" 
+						data-ng-class="{ 'has-error': userForm.firstname.$touched && userForm.firstname.$invalid }">
+						<input 
+							name="firstname"
+							type="text"
+						  	required
+						  	id="firstname" 
+						 	data-ng-model="user.firstname" 
+						  	class="form-control"					
+	        				data-ng-maxlength="10" 	
+	        				data-ng-minlength="2"				     
+						       />
+						<div class="help-block" role="alert" ng-messages="userForm.firstname.$error" ng-if="userForm.firstname.$touched">
+						    <p ng-message="minlength">{{'minlength'|translate }}</p>
+						    <p ng-message="maxlength">{{'maxlength'|translate }}</p>
+						    <p ng-message="required">{{'required'|translate }}</p>
+						</div>				
+				
+					</div>
+					 
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-md-2 col-md-offset-2">
+						<label for="lastname">{{'lastname'|translate }}</label>					
+					</div>
+					<div class="col-md-8">
+						<input type="text" 
+							   data-ng-model="user.lastname" 
+							   class="form-control" id="lastname" 
+							   placeholder="LastName" />
+					</div>
+					 
+				</div>
+				
+			 	<div class="form-group row">
+					<div class="col-md-2 col-md-offset-2">
+						<label for="email">{{'email'|translate }}</label>					
+					</div>
+					<div class="col-md-8" 
+						 data-ng-class="{ 'has-error': userForm.email.$touched && userForm.email.$invalid }"
+					>
+						<input 
+						type="text" data-ng-model="user.email"   
+						data-ng-pattern="/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/"  
+						class="form-control" id="email" 
+						placeholder="{{'email'|translate }}" 
+						name="email"
+						required
+						/>
+						<div class="help-block" role="alert" ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
+						    <p ng-message="pattern">{{'emailpattern'|translate }}</p>
+						    <p ng-message="required">{{'required'|translate }}</p>
+						</div>	
+						
+								
+					</div>
+					 
+				</div>
+				<div class="form-group row">
+					<div class="col-md-2 col-md-offset-2">
+						<label for="cellphone">{{'cellphone'|translate }}</label>					
+					</div>
+					<div class="col-md-8">
+					<input type="tel"  data-ng-model="user.cellphone" class="form-control" id="cellphone" placeholder="CellPhone" />
+					</div>
+					 
+				</div>
+				
+								
+				
+	     
+			  <div class=" form-group row">
+					<div class="col-md-2 col-md-offset-2">
+						<label for="birthday">{{'birthday'|translate }}</label>					
+					</div>
+					<div class="col-md-8">
+						<p class="input-group" >
+			              <input ng-focus="status.opened=!status.opened" type="text" class="form-control" show-weeks="false" uib-datepicker-popup="{{format}}" data-ng-model="user.birthday" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  close-text="Close" />
+			              <span class="input-group-btn">
+			                <button type="button" class="btn btn-default" data-ng-click="status.opened=!status.opened"><i class="glyphicon glyphicon-calendar" ></i></button>
+			              </span>
+			            </p>
+					</div>		    
+			    			    
+			   
+				</div>
+						 
+				
+				<!-- --------------------------------- -->
+				
+				<div class="row">
+					<div class="col-md-2 col-md-offset-6">
+					<button type="submit" class="btn btn-default" ng-disabled="userForm.$invalid">Submit</button>
+					</div>
+					<div class="col-md-2">
+					<button type="button" data-ng-click="changeLanguage('vi')" class="btn btn-default">VI</button>
+					</div>	
+					<div class="col-md-2">
+					<button type="button" data-ng-click="changeLanguage('en')" class="btn btn-default">EN</button>
+					</div>				
+					
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

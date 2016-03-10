@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html data-ng-app="movieApp" xmlns:th="http://www.thymeleaf.org">
+  <head lang="en">
+    <meta charset="utf-8"/>
+     <meta name="_csrf"  th:value="${_csrf.token}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <base href="/api"/>
+    <title>The Movie App</title>
+     <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular.js}"></script>
+    <!-- <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-route.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-route.js}"></script> -->
+    
+   
+    <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-resource.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-resource.js}"></script>
+    
+    <script src="http://cdn.jsdelivr.net/webjars/angular-ui-router/0.2.15/angular-ui-router.js"
+            th:src="@{/webjars/angular-ui-router/0.2.15/angular-ui-router.js}"></script> 
+             
+                   
+  	<script src="//static/angularjs/app.js"
+            th:src="@{/angularjs/app.js}"></script>
+    <script src="//static/angularjs/controllers.js"
+            th:src="@{/angularjs/controllers.js}"></script>
+     <script src="//static/angularjs/services.js"
+            th:src="@{/angularjs/services.js}"></script>        
+  
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="movies">The Movie App</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a ui-sref="movies">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row top-buffer">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div ui-view=""></div> <!-- This is where our views will load -->
+        </div>
+      </div>
+    </div>
+    
+   
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="UTF-8"/>
+ <!--/*/<th:block th:include="fragments/headerinc :: head"></th:block>/*/-->
+<title>Collection Properties</title>
+</head>
+<body>
+
+	<form th:action="@{/colletion}" method="post" th:object="${foocommand}">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">ID</label>
+		    <input type="text" class="form-control" th:field="${foocommand.id}"/>
+		  </div>
+		  <div class="form-group">
+		  <label for="exampleInputEmail1">Foos</label>
+		  <select class="form-control" name="foos" multiple="multiple">
+		  
+			  <option th:each="foo:${foolist}" th:value="${foo.id}" th:selected="${#sets.contains(foocommand.foos,foo)}" th:text="${foo.name}">
+			     
+			  </option>
+			  
+		 </select>
+		 </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+
+</body>
+</html>

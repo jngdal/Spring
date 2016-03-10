@@ -1,0 +1,6 @@
+{
+   "minlength":"Quá ngắn",
+  "maxlength":"Quá dài",
+  "required":"Không được bỏ trống",
+  "emailpattern":"Địa chỉ thư điện tử không hợp lệ"   
+}

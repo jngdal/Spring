@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<body>
+
+
+	<p th:if="${not #strings.isEmpty(message)}" th:text=" ${message}">Status</p>
+	
+	
+	<form th:action="@{/logout}" method="post" id="logoutForm">		
+	</form>
+	
+	<script>
+		function formSubmit() {
+			document.getElementById("logoutForm").submit();
+		}
+	</script>
+	<img src="../static/images/Hydrangeas.jpg" width="200"
+             th:src="@{images/Hydrangeas.jpg}"/>
+	
+		<h2 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!>
+			 <a	href="javascript:formSubmit()"> Logout</a>
+		</h2>
+</body>
+</html>

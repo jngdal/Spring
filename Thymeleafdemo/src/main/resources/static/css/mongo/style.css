@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.main{
+	width:50%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked + label::BEFORE {
+    content: "\f046";
+    color: turquoise;
+}
+
+input[type=checkbox] + label::BEFORE{
+   content: "\f096";
+   font-family: FontAwesome; 
+ }
+
+.modal-backdrop.in {
+    
+    opacity: 0;
+}

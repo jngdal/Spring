@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Pagination in thymeleaf (with twitter bootstrap) + Spring Boot</title>
+<th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body class="container">
+
+<div class="row">
+ <div class="col-md-3" th:each="item:${currentResults.Content}">
+ 
+ <div class="jumbotron">
+        <h1 th:text="${item.id}">${item.id}</h1>
+        <p th:text="${item.description}">${item.description}</p>
+      </div>
+ </div>
+
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <div class='pagination pagination-centered'>
+            <ul class="pagination">
+                <li th:class="${currentIndex == 1}? 'disabled' : ''">
+                    <span th:if='${currentIndex == 1}'>← First</span>
+                    <a th:if='${currentIndex != 1}'
+                       th:href="@{'/awesomeThings/page/1'}">← First</a>
+                </li>
+                <li th:class="${currentIndex != 1}? '' : 'disabled'">
+                    <span th:if='${currentIndex == 1}'>«</span>
+                    <a th:if='${currentIndex != 1}'
+                       th:href="@{'/awesomeThings/page/'+ ${(currentIndex - 1)}}"
+                       title='Go to previous page'>«</a>
+                </li>
+
+                <li th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
+                    th:class="${item == currentIndex ? 'active' : '' }">
+
+                    <span th:if='${item == currentIndex}' th:text='${item}'>1</span>
+
+                    <a th:if='${item != currentIndex}'
+                       th:href="@{'/awesomeThings/page/'+${item }}">
+                        <span th:text='${item}'>1</span>
+                    </a>
+                </li>
+
+                <li th:class="${currentIndex != currentResults.totalPages}? '' : 'disabled'">
+                    <span th:if='${currentIndex == currentResults.totalPages}'>»</span>
+                    <a th:if='${currentIndex != currentResults.totalPages}'
+                       th:href="@{${'/awesomeThings/page/'+(currentIndex + 1)}}" title='Go to next page'>»</a>
+                </li>
+                <li th:class="${currentIndex == currentResults.totalPages}? 'disabled' : ''">
+                    <span th:if='${currentIndex == currentResults.totalPages}'>Last →</span>
+                    <a th:if='${currentIndex != currentResults.totalPages}'
+                       th:href="@{${'/awesomeThings/page/'+ currentResults.totalPages}}">Last →</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

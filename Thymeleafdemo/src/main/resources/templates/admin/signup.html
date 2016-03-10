@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+<title>Spring Framework Guru</title>
+
+<th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+	<div class="container">
+
+		<h2>Create Account</h2>
+		<div>
+
+			<form class="form-horizontal" action="#" th:object="${user}"
+				th:action="@{/admin/signup}" method="post">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Username</label>
+					<div class="col-sm-10">
+						<input name="username" th:field="*{username}"
+							size="47" maxlength="50" type="text" /> <span
+							th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Name
+							Error</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10">
+						<input name="password" th:field="*{password}" size="47" maxlength="50"
+							type="password" /> <span th:if="${#fields.hasErrors('password')}"
+							th:errors="*{password}">Name Error</span>
+					</div>
+				</div>				
+
+				<button type="submit" th:text="Create">Submit</button>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Spring</title>
+  <link rel="alternate" href="https://spring.io/blog" />
+  <link rel="self" href="https://spring.io/blog.atom" />
+  <id>http://spring.io/blog.atom</id>
+  <icon>https://spring.io/favicon.ico</icon>
+  <updated>2016-02-25T20:27:00Z</updated>
+  <entry>
+    <title>Spring Session 1.1.0 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/25/spring-session-1-1-0-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2016-02-25:2401</id>
+    <updated>2016-02-25T20:27:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I&amp;rsquo;m pleased to announce the release of Spring Session 1.1.0.RELEASE. &lt;a href="https://repo1.maven.org/maven2/org/springframework/session"&gt;The release&lt;/a&gt; can be found in Maven Central.&lt;/p&gt;&lt;h2&gt;&lt;a href="#change-log" class="anchor" name="change-log"&gt;&lt;/a&gt;Change Log&lt;/h2&gt;
+&lt;p&gt;With over 80 issues resolved, there is plenty found in this release. You can find a complete list of changes in the change logs (&lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A%221.1.0+M1%22"&gt;1.1.0.M1&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A%221.1.0+RC1%22"&gt;1.1.0.RC1&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A1.1.0"&gt;1.1.0.RELEASE&lt;/a&gt;). A summary of the changes can be found below:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/guides/hazelcast-spring.html"&gt;Hazelcast&lt;/a&gt;. Thanks &lt;a href="https://twitter.com/_mark_a"&gt;@_mark_a&lt;/a&gt; and &lt;a href="https://twitter.com/tommyludwig"&gt;@tommyludwig&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Support for &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/#httpsession-gemfire"&gt;GemFire&lt;/a&gt; Thanks to &lt;a href="https://twitter.com/john_blum"&gt;John Blum&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Support for &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/guides/findbyusername.html"&gt;search for session by username&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Support &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/guides/custom-cookie.html"&gt;Customize Cookie Creation&lt;/a&gt;. Thanks to everyone who provided PRs and feedback for this feature!&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/#httpsession-httpsessionlistener"&gt;HttpSessionListener&lt;/a&gt; support&lt;/li&gt;
+  &lt;li&gt;Allow &lt;a href="https://github.com/spring-projects/spring-session/issues/283"&gt;override default RedisSerializer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/271"&gt;Performance improvements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Allow scoping the session in Redis using &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/#api-redisoperationssessionrepository-config"&gt;redisNamespace&lt;/a&gt;. Thanks &lt;a href="https://github.com/fstegmann"&gt;fstegmann&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Allow writing to Redis immediately (instead of lazily) using &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/#api-redisoperationssessionrepository-config"&gt;redisFlushMode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href="https://github.com/spring-projects/spring-session/issues/272"&gt;ExpiringSession.setLastAccessedTime(long)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#chat-on-gitter" class="anchor" name="chat-on-gitter"&gt;&lt;/a&gt;Chat on Gitter&lt;/h2&gt;
+&lt;p&gt;If you would like to discuss the release or anything else Spring Session, please &lt;a href="https://gitter.im/spring-projects/spring-session"&gt;join us on Gitter&lt;/a&gt; !&lt;/p&gt;&lt;h2&gt;&lt;a href="#1-2-0" class="anchor" name="1-2-0"&gt;&lt;/a&gt;1.2.0&lt;/h2&gt;
+&lt;p&gt;Thanks to a very active community, we already have plans for a 1.2 with support for JDBC and Mongo based repositories. The current plan is to have an RC1 available in March. Assuming there are no issues found we will follow up with a GA release a few weeks afterwards.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/1.1.0.RELEASE/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt; &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Framework 4.2.5 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/25/spring-framework-4-2-5-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>St?phane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-02-25:2400</id>
+    <updated>2016-02-25T12:20:47Z</updated>
+    <content type="html">&lt;p&gt;It is my pleasure to announce that Spring Framework 4.2.5 is available from &lt;a href="https://repo.spring.io/"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/"&gt;Maven Central&lt;/a&gt;! This fifth maintenance release in the 4.2 line contains &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10000&amp;version=15439"&gt;40 fixes and improvements&lt;/a&gt; and is a recommended upgrade for all 4.x users, in particular also from 4.1 now.&lt;/p&gt;
+&lt;p&gt;Our next stop is the first release candidate of Spring Framework 4.3 next month, with &lt;a href="https://jira.spring.io/browse/SPR/fixforversion/15350"&gt;many key features&lt;/a&gt; (including several core container refinements) available in the snapshots already. Please give a 4.3 snapshot a try and let us know if you encounter any regressions.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/SPR"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring XD 1.3.1 GA and Flo for Spring XD 1.0.1 GA released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/24/spring-xd-1-3-1-ga-and-flo-for-spring-xd-1-0-1-ga-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Pollack</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2395</id>
+    <updated>2016-02-24T23:30:13Z</updated>
+    <content type="html">&lt;p&gt;Today we are pleased to announce the general availability of Spring XD 1.3.1 and Flo for Spring XD 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring XD 1.3.1 GA: &lt;a href="http://repo.spring.io/libs-release/org/springframework/xd/spring-xd/1.3.1.RELEASE/spring-xd-1.3.1.RELEASE-dist.zip"&gt;zip&lt;/a&gt;, &lt;a href="http://docs.spring.io/spring-xd/docs/1.3.1.RELEASE/reference/html/#osx-homebrew-installation"&gt;brew&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-xd/docs/1.3.1.RELEASE/reference/html/#redhatcentos-installation"&gt;rpm&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Flo for Spring XD 1.0.1 GA: &lt;a href="https://network.pivotal.io/products/p-spring-flo/"&gt;zip&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are some highlights of bug fixes and general improvements. Consult the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=11401&amp;version=15424"&gt;JIRA release notes&lt;/a&gt; for the full list of issues fixed.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.3.1.RELEASE/reference/html/#encrypted-properties"&gt;Support for encryption in XD configuration files&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.3.1.RELEASE/reference/html/#kafka-configuration"&gt;Support for Kafka sync or async producers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix for Embedded Headers Message Converter Buffer Overflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.3.1.RELEASE/reference/html/#_redis"&gt;Update default redis pool settings to have no limit on number of active connections&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Upgrade to Spring Integration 4.2.5, Spring Framework 4.2.5, Spring AMQP 3.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The next release line introduces a major redesign to the underlying architecture and breaking up Spring XD into several independent projects. Building upon Spring Boot and Spring Cloud capabilities, Spring XD is actively being redesigned as &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt; - a cloud native programming and operating model for composable message-driven microservices. More details can be found in the blog posts: &lt;a href="http://blog.pivotal.io/pivotal-cloud-foundry/products/introducing-spring-cloud-data-flow"&gt;Introducing Spring Cloud Data Flow&lt;/a&gt; and &lt;a href="http://blog.pivotal.io/pivotal-perspectives/features/a-quick-look-at-spring-cloud-data-flow"&gt;A Quick Look At Spring Cloud Data Flow&lt;/a&gt;. InfoQ also summarizes the changes in the article &lt;a href="http://www.infoq.com/news/2015/09/spring-cloud-data-flow"&gt;SpringXD being Re-architected and Re-branded to Spring Cloud Data Flow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback is very important, so please get in touch with questions and comments via&lt;br/&gt;* &lt;a href="http://stackoverflow.com/questions/tagged/spring-xd"&gt;StackOverflow&lt;/a&gt; &lt;code&gt;spring-xd&lt;/code&gt; tag&lt;br/&gt;* &lt;a href="https://jira.spring.io/browse/XD/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel"&gt;Spring JIRA&lt;/a&gt; or &lt;a href="https://github.com/spring-projects/spring-xd/issues"&gt;GitHub Issues&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - February 23, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/23/this-week-in-spring-february-23-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2396</id>
+    <updated>2016-02-23T20:34:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;re already staring down the last weeks of February!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data lead Oliver Gierke &lt;a href="https://spring.io/blog/2016/02/23/spring-data-gosling-sr4-released"&gt;has just announced Spring Data Gosling SR4&lt;/a&gt; containing 45 bugfixes. Get it while it&amp;rsquo;s hot!&lt;/li&gt;
+  &lt;li&gt;Want to learn more about Spring Data Gosling? Check out this replay of Spring Data lead &lt;a href="https://spring.io/blog/2016/02/18/webinar-replay-what-s-new-in-spring-data-gosling-fowler"&gt;Oliver Gierke&amp;rsquo;s introduction too the new bits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the first milestone of Spring Integration 4.3, the last in the 4.x series, has arrived! Lots of small new features to tide you over before &lt;a href="https://spring.io/blog/2016/02/17/spring-integration-4-3-m1-is-available"&gt;Spring framework 5 and the reactive support there become the baseline for Spring integration 5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Let&amp;rsquo;s hear it for women in tech! Ludwine Probst &amp;amp; Ilayaperumal Gopinathan bring you this SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/23/springone2gx-2015-replay-apache-spark-for-big-data-processing"&gt;Apache Spark for Big Data Processing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our pal Sergi Almar, organizer of the &lt;a href="http://www.springio.net/"&gt;Spring IO conference&lt;/a&gt; in beautiful Barcelona this May 19-20, 2016 did another great talk on how to go &lt;a href="http://spring.io/blog/2016/02/23/springone2gx-2015-replay-from-zero-to-hero-with-spring-websocket"&gt;From Zero to Hero with Spring WebSocket&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our Securitay ninja, Rob Winch, starts with the basics in this SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/23/springone2gx-2015-replay-hands-on-spring-security-4-1"&gt;Hands on Spring Security 4.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Craig Walls&amp;rsquo; epic &lt;em&gt;Spring Boot in Action&lt;/em&gt; is available and temporarily at a discount! &lt;a href="https://spring.io/blog/2016/02/18/discount-on-spring-boot-in-action-from-craig-walls"&gt;Get it while it&amp;rsquo;s hot!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our pal Eberhard Wolff gave a good talk at JAX on building microservices &lt;a href="https://jaxenter.de/microservices-mit-spring-boot-und-spring-cloud-35223"&gt;with Spring Boot and Spring Cloud: check it out&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;I wanted to take a moment to warn you of the dangers of the internet &lt;a href="http://www.ekiras.com/2016/02/how-to-disable-application-banner-in-spring-boot.html"&gt;and posts like this&lt;/a&gt; that seek only to &lt;em&gt;encourage&lt;/em&gt; disabling the banners of Spring Boot-based applications. This is a &lt;em&gt;terrible&lt;/em&gt; idea! How will you ever get Amazing banners like &lt;a href="http://i.stack.imgur.com/SgPGS.png"&gt;this Nyan Cat banner&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/pull/4647"&gt;the &lt;code&gt;ImageBanner&lt;/code&gt; PR proposed here&lt;/a&gt;? I wasn&amp;rsquo;t originally going to include this article in &lt;em&gt;This Week in Spring&lt;/em&gt; (as a matter of principle!) but was consoled upon &lt;a href="https://twitter.com/yanncebron/status/702216038344220672"&gt;this epic response&lt;/a&gt; from &lt;a href="http://twitter.com/yanncebron"&gt;the &lt;em&gt;epic&lt;/em&gt; IntellIJ IDEA developer Yann C?bron&lt;/a&gt; demonstrating that the checkbox that previously disabled the Spring Boot banner was no longer enabled! :D&lt;/li&gt;
+  &lt;li&gt;there&amp;rsquo;s an interesting example of &lt;a href="http://www.penninkhof.com/2016/02/openui5-boilerplate-based-on-olingo-jpa-and-spring-boot/"&gt;configuring OpenUI5 based on Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our pal Nicolas Frankel&amp;rsquo;s written up a nice blog on managing &lt;a href="https://blog.frankel.ch/log-management-in-spring-boot"&gt;logs with Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want to use &lt;a href="https://blog.codecentric.de/en/2016/02/spring-boot-apache-cxf/"&gt;Apache CXF with Spring Boot (in 2016)&lt;/a&gt; to build a SOAP web service?&lt;/li&gt;
+  &lt;li&gt;I did an interview &lt;a href="http://twitter.com/infoq"&gt;with InfoQ&lt;/a&gt; on &lt;a href="http://www.infoq.com/interviews/long-spring-boot-cloud"&gt;Spring Boot, Spring Cloud and microservices in general&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Speaking of IntellIJ, the first preview of the new version 16 is out and contains updated support for Spring MVC, Spring framework, and Spring Boot as well as updated Kotlin support! &lt;a href="http://blog.jetbrains.com/idea/2016/02/intellij-idea-16-public-preview/#more-13998"&gt;Check out the bits and file issues if you discover anything&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Data Gosling SR4 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/23/spring-data-gosling-sr4-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Oliver Gierke</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2394</id>
+    <updated>2016-02-23T16:42:58Z</updated>
+    <content type="html">&lt;p&gt;In preparation of a Spring Boot service release on the horizon, I am pleased to announce the fourth service release of the Spring Data release train Gosling. As usual, service releases contain bugfixes ? &lt;a href="https://jira.spring.io/issues/?filter=15356"&gt;45 in total&lt;/a&gt; this time ?, so that an upgrade is highly recommended.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Commons 1.11.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/1.11.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.11.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.11.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.11.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data JPA 1.9.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/1.9.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.9.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.9.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.9.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Cassandra 1.3.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-cassandra/1.3.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.3.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.3.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.3.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Solr 1.5.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/1.5.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.5.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.5.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/1.5.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Gemfire 1.7.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-gemfire/1.7.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.7.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.7.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.7.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Neo4j 3.4.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-neo4j/3.4.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.4.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.4.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/3.4.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data MongoDB 1.8.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-mongodb/1.8.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.8.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.8.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.8.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data KeyValue 1.0.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-keyvalue/1.0.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.0.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.0.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.0.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data REST 2.4.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-rest-webmvc/2.4.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.4.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.4.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.4.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Redis 1.6.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-redis/1.6.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.6.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.6.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.6.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Elasticsearch 1.3.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/1.3.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.3.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.3.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/1.3.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Couchbase 1.4.4 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/1.4.4.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.4.4.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.4.4.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/1.4.4.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Hands on Spring Security 4.1</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/23/springone2gx-2015-replay-hands-on-spring-security-4-1" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2399</id>
+    <updated>2016-02-23T14:09:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2015&lt;br/&gt;Presenter: Rob Winch&lt;br/&gt;Core Spring Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/hands-on-spring-security-41"&gt;http://www.slideshare.net/SpringCentral/hands-on-spring-security-41&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It can be complicated learning the ins and outs of any technology stack. When this complexity is compounded by needing to understand how to secure our applications, it can be daunting.&lt;/p&gt;
+&lt;p&gt;In this talk we will discuss how to rapidly and correctly apply Spring Security to an existing application. Along the way we will demo security exploits and see how to mitigate them, answer frequently asked questions, and learn established best practices.&lt;/p&gt;
+&lt;p&gt;Whether you are new to Spring Security or a seasoned Spring Security user, this presentation is a must.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Z1DfpxQ84as" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Apache Spark for Big Data Processing</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/23/springone2gx-2015-replay-apache-spark-for-big-data-processing" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2398</id>
+    <updated>2016-02-23T13:05:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2015&lt;br/&gt;Presenters: Ludwine Probst &amp;amp; Ilayaperumal Gopinathan&lt;br/&gt;Big Data Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/apache-spark-for-big-data-processing"&gt;http://www.slideshare.net/SpringCentral/apache-spark-for-big-data-processing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Today, we live in the world of Big Data. Hadoop and MapReduce are highly dominant in the domain of large scale data processing. However, the MapReduce model shows its limits for various types of treatment, especially for highly iterative algorithms frequently encountered in the field of Machine Learning.&lt;/p&gt;
+&lt;p&gt;Spark is an in-memory data processing framework that, unlike Hadoop, provides interactive and real-time analysis on large datasets. Furthermore, Spark has a more flexible programming model and gives better performance than Hadoop.&lt;/p&gt;
+&lt;p&gt;In this talk, we aim at giving a portrait of Spark and at browsing its ecosystem, in particular Spark Streaming and MLlib with a concrete example. We will also show how you can use Spark with Spring XD, allowing you to take advantage of the strengths in each platform.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Zv_mnjYhFAk" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: From Zero to Hero with Spring WebSocket</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/23/springone2gx-2015-replay-from-zero-to-hero-with-spring-websocket" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-23:2397</id>
+    <updated>2016-02-23T13:00:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2015&lt;br/&gt;Presenter: Sergi Almar&lt;br/&gt;Web /Javascript Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/from-zero-to-hero-with-spring-websocket"&gt;http://www.slideshare.net/SpringCentral/from-zero-to-hero-with-spring-websocket&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Real-time has changed the way we interact with the web, we demand information in real-time. Join Sergi Almar in this presentation to learn how to progressively enhance your traditional Spring MVC application with real-time functionalities for a more interactive and engaging user experience. Starting by adding server push notifications with Server-sent Events (supported in the new Spring 4.2) we will move to a bidirectional messaging communication style with WebSockets. Going real-time couldn&amp;rsquo;t be easier with Spring! We will also see the challenges and considerations to take into account when scaling our WebSocket application and deploy it to Cloud Foundry.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/nxakp15CACY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar replay: What's new in Spring Data Gosling-Fowler</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/18/webinar-replay-what-s-new-in-spring-data-gosling-fowler" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-19:2392</id>
+    <updated>2016-02-18T18:35:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: Oliver Gierke&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/whats-new-in-spring-data-53300373"&gt;http://www.slideshare.net/SpringCentral/whats-new-in-spring-data-53300373&lt;/a&gt;&lt;br/&gt;A year has passed and the Spring Data shipped two release train iterations packed with interesting features. This talk will give a broad overview of the most important introduced in the Fowler and Gosling release trains. We will cover recent additions and improvements in Spring Data Commons - the module that&amp;rsquo;s shared amongst the store specific ones. We&amp;rsquo;ll then delve into the latest and greatest features of individual store modules, like JPA, MongoDB and the community ones as well.&lt;/p&gt;
+&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/j28kkTSF8p8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Discount on Spring Boot in Action from Craig Walls</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/18/discount-on-spring-boot-in-action-from-craig-walls" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-18:2391</id>
+    <updated>2016-02-18T07:25:00Z</updated>
+    <content type="html">&lt;center&gt;&#xD;
+&lt;b&gt;Save 39% on Craig Walls's epic book with this new promotion from Manning!&lt;/b&gt;&#xD;
+&lt;img src="https://images.manning.com/255/340/resize/book/6/bb80688-f898-4df7-838a-253b1de123c4/Walls-SpringBoot-HI.png"&gt;&#xD;
+&lt;/center&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s with equal parts excitement and passion that I absolutely endorse &lt;a href="https://www.manning.com/books/spring-boot-in-action"&gt;Spring Boot in Action&lt;/a&gt; as the easy-to-digest and fun-to-read Spring Boot documentation the Java community has been waiting for. Craig&amp;rsquo;s accessible writing style and sweeping analysis of Boot&amp;rsquo;s core features and functionality will surely leave readers with a solid grasp of Boot (along with a joyful sense of awe for it).&amp;rdquo;&lt;br/&gt;- Andrew Glover, Manager, Delivery Engineering at Netflix&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.manning.com/books/spring-boot-in-action"&gt;Spring Boot in Action&lt;/a&gt; is a developer-focused guide to writing applications using Spring Boot. YouÅfll learn how to bypass configuration steps so you can focus on your applicationÅfs behavior. Spring expert Craig Walls uses interesting and practical examples to teach you both how to use the default settings effectively and how to override and customize Spring Boot for your unique environment. Along the way, youÅfll pick up insights from CraigÅfs years of Spring development experience. &lt;/p&gt;
+&lt;p&gt;See for yourself. Check out chapter 2, &lt;a href="https://manning-content.s3.amazonaws.com/download/9/eb3cdc9-9d50-412e-adab-2c61625bcd84/chapter%202%20sample.pdf"&gt;Developing your first Spring Boot application&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Save 39% on Spring Boot in Action with discount code &lt;strong&gt;springbootia&lt;/strong&gt; at &lt;a href="http://manning.com/"&gt;manning.com&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Integration 4.3 M1 is Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/17/spring-integration-4-3-m1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2016-02-17:2388</id>
+    <updated>2016-02-17T00:00:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Integration team IÅfm happy to announce the &lt;strong&gt;First Milestone&lt;/strong&gt; of the Spring Integration 4.3 release.&lt;/p&gt;
+&lt;p&gt;4.3 is planned to be only a minor release with a few new features and improvements over 4.2 and will close out the 4.x line. Meanwhile we are looking forward to embrace the &lt;a href="https://spring.io/blog/2016/02/16/reactor-2-5-a-second-generation-reactive-foundation-for-the-jvm"&gt;Reactive Foundation for the JVM&lt;/a&gt; in Spring Integration 5.0. We have yet to determine exactly what that means, so stay tuned! In addition, 5.0 (2017) will include the (currently separate) &lt;a href="https://github.com/spring-projects/spring-integration-java-dsl"&gt;Spring Integration Java DSL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We plan on finalizing 4.3 over the next few months before switching our attention full-time to 5.0 so, if there is some &lt;strong&gt;must have&lt;/strong&gt; feature you need before next year; speak up now via JIRA or GitHub Issues.&lt;/p&gt;
+&lt;p&gt;Anyway, I&amp;rsquo;d like to highlight some improvements in this Spring Integration 4.3 milestone:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code&gt;negate&lt;/code&gt; option for the &lt;code&gt;HeaderMapper&lt;/code&gt;s to allow to exclude request and/or reply headers just with logical NOT &lt;code&gt;!&lt;/code&gt;. (e.g. &lt;code&gt;*,!foo&lt;/code&gt; - map all headers except &lt;code&gt;foo&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Exception&lt;/code&gt; superclass mappings for the &lt;code&gt;ErrorMessageExceptionTypeRouter&lt;/code&gt; to avoid mapping duplications for different inheritors.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;null&lt;/code&gt; Remote Directory support for the &lt;code&gt;list()&lt;/code&gt; and &lt;code&gt;listNames()&lt;/code&gt; functions in the FTP adapters to meet the standard FTP protocol support for client current working directory .&lt;/li&gt;
+  &lt;li&gt;An option to change the direction of Redis List Push/Pop operations in the Redis Queue Adapters.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;FileWritingMessageHandler&lt;/code&gt; &lt;em&gt;sub-path&lt;/em&gt; support in the file name to allow to restore the directory structure locally, e.g. after &lt;a href="https://spring.io/blog/2016/01/12/spring-integration-zip-1-0-0-m1-and-others"&gt;unzipping&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Upgrade to Smack-4.1.x.&lt;/li&gt;
+  &lt;li&gt;And, of course, upgrade to &lt;a href="https://spring.io/blog/2016/02/16/spring-amqp-1-6-0-milestone-1-and-1-5-4-available"&gt;Spring Amqp 1.6&lt;/a&gt; with support for its new features like Delayed Message Exchange!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please, consult the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;version=15396"&gt;Release Notes&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-integration/docs/4.3.0.M1/reference/html/whats-new.html"&gt;What&amp;rsquo;s New&lt;/a&gt; for complete information about the included changes.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt; tag)&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - February 16th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/this-week-in-spring-february-16th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2383</id>
+    <updated>2016-02-16T20:41:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&amp;rsquo;s been a busy week for all of us on the Spring team, as you&amp;rsquo;re about to see! I&amp;rsquo;ve just finished my presentation at the &lt;a href="http://devnexus.com"&gt;epic DevNexus&lt;/a&gt; show and now I&amp;rsquo;m off to visit customers in Hartford and Los Angeles before making my way to the epic ConFoo conference in Montreal, Canada. If you&amp;rsquo;re in the area, be sure &lt;a href="http://twitter.com/starbuxman"&gt;to ping me and say hi&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve got a lot to cover, so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reactor project lead Stephane Maldini just announced &lt;a href="https://spring.io/blog/2016/02/16/reactor-2-5-a-second-generation-reactive-foundation-for-the-jvm"&gt;Reactor 2.5: A Second Generation Reactive Foundation for the JVM&lt;/a&gt;. This is a huge part of our continued efforts to better support reactive workloads with Spring.&lt;/li&gt;
+  &lt;li&gt;We&amp;rsquo;ve added a new language, Kotlin, to the &lt;a href="http://start.spring.io"&gt;Spring Initializr&lt;/a&gt;! To learn more check out this great post by Sebastien Deleuze on &lt;a href="https://spring.io/blog/2016/02/15/developing-spring-boot-applications-with-kotlin"&gt;Developing Spring Boot applications with Kotlin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration and Spring AMQP lead Gary Russell&amp;rsquo;s just announced &lt;a href="https://spring.io/blog/2016/02/16/spring-amqp-1-6-0-milestone-1-and-1-5-4-available"&gt;Spring AMQP 1.6.0 Milestone 1 (and 1.5.4) Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring REST Docs lead Andy Wilkinson&amp;rsquo;s just announced &lt;a href="https://spring.io/blog/2016/02/16/spring-rest-docs-1-1-0-m1"&gt;Spring REST Docs 1.1.0.M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;last week, Spring Data Couchbase 2.0 went GA, and this week I&amp;rsquo;m pleased to share a guest post from project lead Simon Basl? introducing &lt;a href="https://spring.io/blog/2016/02/10/spring-data-couchbase-2-0"&gt;Spring Data Couchbase 2.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I threw together a look at Distributed Tracing with &lt;a href="https://spring.io/blog/2016/02/15/distributed-tracing-with-spring-cloud-sleuth-and-spring-cloud-zipkin"&gt;Spring Cloud Sleuth and Spring Cloud Zipkin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data lead Oliver Gierke has just announced &lt;a href="https://spring.io/blog/2016/02/12/spring-data-release-train-hopper-m1-released"&gt;Spring Data Release Train Hopper M1 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Webinar on Stormpath and Spring Boot Authentication on &lt;a href="http://spring.io/blog/2016/02/16/webinar-spring-boot-authentication-and-more"&gt;this thursday&lt;/a&gt; - not too late to register!&lt;/li&gt;
+  &lt;li&gt;Join Oracle&amp;rsquo;s Geertjan Wielenga on Thursday Feb 25th for a Webinar on &lt;a href="http://spring.io/blog/2016/02/16/webinar-up-and-running-with-spring-boot-in-netbeans-ide"&gt;NetBeans and Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/16/springone2gx-2015-replay-federated-queries-with-hawq-sql-on-hadoop-and-beyond"&gt;Federated Queries with HAWQ - SQL on Hadoop and Beyond&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/16/springone2gx-2015-replay-intro-to-spring-boot-for-the-web-teir"&gt;Intro to Spring Boot for the Web Teir&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/16/springone2gx-2015-replay-behind-the-oss-curtain-how-we-manage-spring"&gt;Behind the OSS curtain - How we manage Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SpringOne2GX 2015 replay: &lt;a href="http://spring.io/blog/2016/02/16/springone2gx-2015-replay-developing-cloud-native-applications-with-the-spring-tool-suite"&gt;Developing cloud-native applications with the Spring Tool Suite&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;project lead Rob Winch has just announced &lt;a href="https://spring.io/blog/2016/02/11/spring-session-1-1-0-rc1-released"&gt;Spring Session 1.1.0 RC1 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring framework lead Juergen Hoeller has thrown up a note to share his speaking itinerary in &lt;a href="https://spring.io/blog/2016/02/11/from-vienna-to-riga-and-london"&gt;Vienna to Riga and London&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/02/10/we-have-adopted-a-contributor-code-of-conduct"&gt;We have adopted a Contributor Code of Conduct across all of our projects&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this &lt;em&gt;Geowarin&lt;/em&gt; post on using &lt;a href="http://geowarin.github.io/spring-boot-and-rethinkdb.html"&gt;Spring Boot and RethinkDB was pretty interesting indeed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Brian Hannaway put together a very nice &lt;a href="http://briansjavablog.blogspot.com/2015/12/spring-boot-rest-tutorial.html"&gt;guide on developing (and testing!) Spring-based REST APIs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;our pal K. Siva Prasad Reddy is back at it again, this time with a post on how &lt;a href="http://sivalabs.github.io/creating-custom-springboot-starter-twitter4j/"&gt;he created&lt;/a&gt; a &lt;a href="http://sivalabs.github.io/creating-custom-springboot-starter-twitter4j/"&gt;Spring Boot starter for Twitter4J&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar:  Up and Running with Spring Boot in NetBeans IDE</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/webinar-up-and-running-with-spring-boot-in-netbeans-ide" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-17:2390</id>
+    <updated>2016-02-16T16:27:00Z</updated>
+    <content type="html">&lt;p&gt;Guest Speaker: Geertjan Wielenga, Principal Product Manager, Oracle&lt;/p&gt;
+&lt;p&gt;NetBeans IDE is the official IDE of the Java platform. Focused on rapid out-of-the-box development of all kinds of Java applications, NetBeans is comprehensive and easy to use. In particular, its free and open source tooling for end-to-end development is much admired.&lt;br/&gt;Over recent years, many developers have added NetBeans to their toolbox because of its intuitive and powerful integration with Maven and Gradle. During this session you will see how NetBeans is well suited for setting up and developing applications that make use of Spring Boot.&lt;br/&gt;You will also learn about the many new features that have been added in NetBeans IDE 8.0 and 8.1, helping you working quickly and effectively with Java and Maven in the context of Spring Boot. By the end of this session, you&amp;rsquo;ll have a better grasp of Spring Boot, as well as a thorough understanding of the range of features that NetBeans provides for working with it!&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;Thursday, Feb 25th, 2016 3:00PM London GMT &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMSpringBootinNetBeansIDE_RegisterSpring.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Thursday, Feb 25th, 2016 10:00AM PST (San Francisco GMT-08:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMSpringBootinNetBeansIDE_RegisterSpring.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar: Spring Boot Authentication... and More!</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/webinar-spring-boot-authentication-and-more" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-17:2389</id>
+    <updated>2016-02-16T16:24:00Z</updated>
+    <content type="html">&lt;p&gt;Guest Speaker: Micah Silverman, Java Developer Evangelist, Stormpath&lt;/p&gt;
+&lt;p&gt;Join Stormpath Java Developer Evangelist Micah Silverman for a technical overview of the common pain points with Java authentication. We'll cover how to solve them with Stormpath in a Spring Boot application, and demonstrate how to quickly add a complete user management system to your Spring Boot app. &#xD;
+&#xD;
+By the end of this webinar, youÅfll be on your way to a fully functioning Spring Boot app backed by Stormpath. &#xD;
+&#xD;
+Topics Covered:&#xD;
+&#xD;
+Authentication Pain Points in Java&#xD;
+Stormpath, Spring Boot, and Your Architecture&#xD;
+Demo: Auth in Spring Boot, with these features:&#xD;
+A complete user registration and login system&#xD;
+Pre-built login screens&#xD;
+Password reset workflows&#xD;
+Group-based authorization&#xD;
+Advanced user features: API authentication, Single Sign-On, social login, and more&#xD;
+Technical Q&amp;A&lt;/p&gt;
+&lt;p&gt;Thursday, Feb 18th, 2016 3:00PM London GMT &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMSpringBootAuthentication_RegisterSpring.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Thursday, Feb 18th, 2016 10:00AM PST (San Francisco GMT-08:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMSpringBootAuthentication_RegisterSpring.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring AMQP 1.6.0 Milestone 1 (and 1.5.4) Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/spring-amqp-1-6-0-milestone-1-and-1-5-4-available" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2016-02-12:2381</id>
+    <updated>2016-02-16T15:04:41Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the availability of the first milestone of the 1.6 version of Spring AMQP.&lt;/p&gt;
+&lt;p&gt;Some highlights of this release:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+  &lt;p&gt;A new jar &lt;code&gt;spring-rabbit-test&lt;/code&gt; containing a test harness to help with testing &lt;code&gt;@RabbitListener&lt;/code&gt; methods; see &lt;a href="http://docs.spring.io/spring-amqp/docs/1.6.0.M1/reference/html/_reference.html#testing"&gt;the testing chapter&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Multiple &lt;code&gt;@RabbitListener&lt;/code&gt; annotations on a method (when using Java 8) and the &lt;code&gt;@RabbitListeners&lt;/code&gt; annotation (for pre-Java 8), each allowing the same method to be the listener method for multiple listener containers.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Full support for the &lt;a href="https://www.rabbitmq.com/blog/2015/04/16/scheduling-messages-with-rabbitmq/"&gt;Delayed Message Exchange&lt;/a&gt; RabbitMQ plugin.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;An &lt;code&gt;AsyncRabbitTemplate&lt;/code&gt; returning &lt;code&gt;ListenableFuture&amp;lt;?&amp;gt;&lt;/code&gt; for request/reply messaging.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;An option to publish &lt;code&gt;ApplicationEvents&lt;/code&gt; when listener containers go idle.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complete list of new features, see the &lt;a href="http://docs.spring.io/spring-amqp/docs/1.6.0.M1/reference/html/_introduction.html#_changes_in_1_6_since_1_5"&gt;What&amp;rsquo;s new?&lt;/a&gt; as well as the &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;version=15297"&gt;JIRA Release Notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href="http://projects.spring.io/spring-amqp/"&gt;project page&lt;/a&gt; for links to downloads, documentation etc. &lt;/p&gt;
+&lt;p&gt;In addition, the 1.5.4.RELEASE is available with a few &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;version=15454"&gt;minor bug fixes&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Federated Queries with HAWQ - SQL on Hadoop and Beyond</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/springone2gx-2015-replay-federated-queries-with-hawq-sql-on-hadoop-and-beyond" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2386</id>
+    <updated>2016-02-16T15:01:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2015&lt;br/&gt;Presenter: Christian Tzolov&lt;br/&gt;Big Data Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/federated-queries-with-hawq-sql-on-hadoop-and-beyond-53208753"&gt;http://www.slideshare.net/SpringCentral/federated-queries-with-hawq-sql-on-hadoop-and-beyond-53208753&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the space of Big Data, Pivotal offers two powerful data processing tools namely HAWQ and GemFire. HAWQ is a scalable OLAP SQL-on-Hadoop system, while GemFire is OLTP like, in-memory data grid and event processing system. This presentation will show different integration approaches that allow integration and data exchange between HAWQ and GemFire. The practical experience in applying Spring Boot and Spring XD for some of the use cases will be shared while walking you through the implementation of the different Integration strategies. Amongst other we will show an integration path that leverages SpringXD to ingest GemFire data and store it in HDFS as well as the benefits of using Spring Boot to implement REStful proxy for the HAWQ Web Table integration scenario.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/PEhdO7HFGrY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Intro to Spring Boot for the Web Teir</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/springone2gx-2015-replay-intro-to-spring-boot-for-the-web-teir" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2385</id>
+    <updated>2016-02-16T14:49:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX&lt;br/&gt;Presenters: Stephan? Nicoll &amp;amp; Brian Clozel&lt;br/&gt;Web / Javascript Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/spring-boot-for-the-web-tier-53204645"&gt;http://www.slideshare.net/SpringCentral/spring-boot-for-the-web-tier-53204645&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Only 2 years after its inception, Spring Boot is already very popular amongst Spring developers. If youÅfre familiar with Spring MVC, you may wonder how Spring Boot can improve your web development experience and how its internals work.&lt;/p&gt;
+&lt;p&gt;First weÅfll go over the basics of a REST service powered by Boot. WeÅfll then gradually add more features that are typical to modern web applications. Along the way, weÅfll see how Boot is helping us with front-end resources, security, error customization, template engines, embedded container configuration and devops features.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Q_v93Dy7te0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Behind the OSS curtain - How we manage Spring</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/springone2gx-2015-replay-behind-the-oss-curtain-how-we-manage-spring" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2384</id>
+    <updated>2016-02-16T14:43:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2015&lt;br/&gt;Presenters: Baruch Sadogursky &amp;amp; Phil Webb&lt;br/&gt;Core Spring Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/behind-the-oss-curtain-how-we-manage-spring"&gt;http://www.slideshare.net/SpringCentral/behind-the-oss-curtain-how-we-manage-spring&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How is the open source you use published actually managed? What techniques and tools do successful open source projects use? How are open source projects able to lever the community that they build? This talk will take you behind the scenes of the Spring Framework to show you how we manage code, issues and releases. We&amp;rsquo;ll talk about the tools that we use, how we keep code clean and consistent, and how we use Artifactory/Bintray to manage the bits.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hSIcYcLRKzM" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2015 replay: Developing cloud-native applications with the Spring Tool Suite</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/springone2gx-2015-replay-developing-cloud-native-applications-with-the-spring-tool-suite" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2387</id>
+    <updated>2016-02-16T14:42:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded At SpringOne2GX 2015&lt;br/&gt;Presenters: Kris De Volder &amp;amp; Martin Lippert&lt;br/&gt;Core Spring Track&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/developing-cloud-native-applications-with-the-spring-tool-suite"&gt;http://www.slideshare.net/SpringCentral/developing-cloud-native-applications-with-the-spring-tool-suite&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this session we will demonstrate how to work effectively with Spring projects in Eclipse and the Spring Tool Suite (STS). We will demo all the latest enhancements in the tools including features like much smarter property file editing. We will also demonstrate new features in the Eclipse 4.5 (Mars) platform. Going beyond basic application development we will look at how to build and work with systems composed of individual Spring applications that represent microservices. How to easily exploit Spring Cloud to address some common infrastructure issues that come up with this architecture, and weÅfll show how to deploy these applications both locally and then remotely to Cloud Foundry, all from Eclipse. WeÅfll show off the new features of the Cloud Foundry Eclipse plugin including better support for Spring Boot apps, improved performance and full remote debugging for apps running on CF from your desktop Eclipse. For more rapid development of your cloud native applications in a ÅeCloud Foundry likeÅf environment on your local machine we will demonstrate deploying to Lattice from STS. Lattice (&lt;a href="http://lattice.cf"&gt;http://lattice.cf&lt;/a&gt;) is an open source project for running containerized workloads. Note: lattice.cf is being discontinued and is being replaced with MicroPCF &lt;a href="https://github.com/pivotal-cf/micropcf"&gt;https://github.com/pivotal-cf/micropcf&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/bLuB6doZsn0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring REST Docs 1.1.0.M1</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/16/spring-rest-docs-1-1-0-m1" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-02-16:2382</id>
+    <updated>2016-02-16T12:18:04Z</updated>
+    <content type="html">&lt;p&gt;It&amp;rsquo;s my pleasure to announce that the first milestone of Spring REST Docs 1.1 has been released. 1.1.0.M1 is available from &lt;a href="https://repo.spring.io/milestone/"&gt;https://repo.spring.io/milestone/&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h1&gt;&lt;h2&gt;&lt;a href="#rest-assured" class="anchor" name="rest-assured"&gt;&lt;/a&gt;REST Assured&lt;/h2&gt;
+&lt;p&gt;As an alternative to the lightweight server-less documentation generation offered by Spring Framework&amp;rsquo;s &lt;code&gt;MockMvc&lt;/code&gt;, you can now use &lt;a href="http://rest-assured.io"&gt;REST Assured&lt;/a&gt; to test and document your RESTful services. This opens up Spring REST Docs to all four corners of the JVM and beyond, allowing you to document anything that you can access via HTTP.&lt;/p&gt;&lt;h2&gt;&lt;a href="#markdown" class="anchor" name="markdown"&gt;&lt;/a&gt;Markdown&lt;/h2&gt;
+&lt;p&gt;Support has been added for generating Markdown snippets. On its own, Markdown isn&amp;rsquo;t as capable as Asciidoctor, but can work very well when combined with existing documentation toolchains such as &lt;a href="https://github.com/tripit/slate"&gt;Slate&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#testng" class="anchor" name="testng"&gt;&lt;/a&gt;TestNG&lt;/h2&gt;
+&lt;p&gt;In addition to the existing support for using JUnit, you can now use Spring REST Docs with &lt;a href="http://testng.org"&gt;TestNG&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h1&gt;
+&lt;p&gt;We&amp;rsquo;re hoping to publish a release candidate in around two months&amp;rsquo; time with a release to follow shortly after that. Please refer to the &lt;a href="https://github.com/spring-projects/spring-restdocs/issues"&gt;issue tracker&lt;/a&gt; for details of what&amp;rsquo;s planned and to add any enhancement ideas of your own.&lt;/p&gt;
+&lt;p&gt;Thank you for the feedback and suggestions that have shaped 1.1.0 thus far. Please try out the first milestone and let us know what you think.&lt;/p&gt;</content>
+  </entry>
+</feed>

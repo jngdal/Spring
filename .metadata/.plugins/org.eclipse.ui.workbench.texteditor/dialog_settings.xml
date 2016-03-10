@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="hibernate.properties not found&#x0D;&#x0A;2016-02-05 13:55:39.301  INFO 1432 --- [ost-startStop-1] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist&#x0D;&#x0A;2016-02-05 13:55:39.621  INFO 1432 --- [ost-startStop-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}&#x0D;&#x0A;2016-02-05 13:55:39.941  INFO 1432 --- [ost-startStop-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect&#x0D;&#x0A;2016-02-05 13:55:40.091  INFO 1432 --- [ost-startStop-1] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory&#x0D;&#x0A;2016-02-05 13:55:40.411  INFO 1432 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update&#x0D;&#x0A;2016-02-05 13:55:40.411  INFO 1432 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata&#x0D;&#x0A;2016-02-05 13:55:40.411  INFO 1432 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema&#x0D;&#x0A;2016-02-05 13:55:40.412  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: test.awesome_things&#x0D;&#x0A;2016-02-05 13:55:40.412  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [description, id]&#x0D;&#x0A;2016-02-05 13:55:40.412  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []&#x0D;&#x0A;2016-02-05 13:55:40.412  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]&#x0D;&#x0A;2016-02-05 13:55:40.422  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: test.detailusers&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [birthday, firstname, cellphone, userid, email, lastname, status]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: test.friends&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [friendid, userid]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_4lc37s6h721b84k6sbpyglr5q, fk_3kxubfwaop5h4tedlslv84yi]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_4lc37s6h721b84k6sbpyglr5q, uk_3kxubfwaop5h4tedlslv84yi]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: test.persistent_logins&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [series, last_used, token, username]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_f8t9fsfwc17s6qcbx0ath6l3h]&#x0D;&#x0A;2016-02-05 13:55:40.432  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_f8t9fsfwc17s6qcbx0ath6l3h, primary]&#x0D;&#x0A;2016-02-05 13:55:40.442  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: test.persons&#x0D;&#x0A;2016-02-05 13:55:40.442  INFO 1432 --- [ost-startStop-1] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [name, age]" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="true" key="wholeword"/>
+		<list key="findhistory">
+			<item value="temp"/>
+			<item value="signInAdapter"/>
+			<item value="signUpUrl"/>
+			<item value="dataSource"/>
+			<item value="signInUrl"/>
+			<item value="failureUrl"/>
+			<item value="defaultFailureUrl"/>
+			<item value="failureHandler"/>
+		</list>
+		<list key="replacehistory">
+			<item value="class"/>
+			<item value="data-ng-class"/>
+			<item value="ng-class"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1117" key="DIALOG_X_ORIGIN"/>
+		<item value="259" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

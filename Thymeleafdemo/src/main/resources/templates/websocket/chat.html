@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="chatApp">
+  <head>
+  <head>
+	
+	
+</head>
+     <script src="http://cdn.jsdelivr.net/webjars/sockjs-client/0.3.4/sockjs.js"
+            th:src="@{/webjars/sockjs-client/0.3.4/sockjs.js}"></script>
+    <script src="http://cdn.jsdelivr.net/webjars/stomp-websocket/2.3.3/stomp.js"
+            th:src="@{/webjars/stomp-websocket/2.3.3/stomp.js}"></script>
+      <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular.js}"></script>
+      <script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular-resource.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular-resource.js}"></script>       
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/chat/style.css}" rel="stylesheet" type="text/css" />    
+    
+    <script src="//static/angularjs/chat/app.js"
+            th:src="@{/angularjs/chat/app.js}"></script>
+    <script src="//static/angularjs/chat/controllers.js"
+            th:src="@{/angularjs/chat/controllers.js}"></script>
+     <script src="//static/angularjs/chat/services.js"
+            th:src="@{/angularjs/chat/services.js}"></script> 
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js}"></script>  
+    
+           
+          
+  </head>
+  <body class="container">
+ 
+    <div data-ng-controller="ChatCtrl" >
+      <div class="row">
+      <button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Group</button>
+		<div uib-collapse="isCollapsed">
+		  <div class="well" >	  	
+				  
+		 		<button class="btn btn-default" data-ng-repeat="user in users" > {{user.firstname+" "+user.lastname}}
+		 		<img class="img-circle" ng-class="{'sprite connect':user.status,'sprite disconect':!user.status}"></img>	 
+		 		</button>
+		 		
+	
+		  </div>
+		</div>
+		      
+      </div>
+      
+      <div class="scroll row jumbotron">
+       
+      <div ng-repeat="message in messages | orderBy:'time':true">
+        
+        <h4>{{message.user}}</h4>
+        <time>{{message.time | date:'HH:mm'}}</time>
+        <span ng-class="{self: message.self}">{{message.message}}</span>
+        
+      </div>
+      </div>
+      <div class="row">
+      <form ng-submit="addMessage()" name="messageForm">
+      	<input type="hidden"  th:value="${_csrf.token}" id="token"/>
+        <input class="form-control" type="text" placeholder="Compose a new message..." ng-model="message" />
+        <div class="info">
+          <span class="count" ng-bind="max - message.length" ng-class="{danger: message.length > max}">140</span>
+          <button ng-show="false" ng-disabled="message.length > max || message.length === 0" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+      </div>
+      
+      
+      
+      
+      
+      
+    </div>
+       
+  </body>
+</html>
+
+
+
+
+
+
+  
+  
+  

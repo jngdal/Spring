@@ -1,0 +1,21 @@
+package com.example.repositories;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.domain.DetailUser;
+
+public class StorePrucedureRepositoryIplm implements StorePrucedureRepository {
+
+	@Autowired
+	EntityManager entityManager;
+	@Override
+	public List<DetailUser> allDetailUser(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

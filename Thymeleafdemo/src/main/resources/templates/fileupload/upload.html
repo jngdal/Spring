@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+ <meta name="_csrf"  th:value="${_csrf.token}"/>
+<title>file upload </title>
+<th:block th:include="fragments/headerinc :: head"></th:block>
+<script type="text/javascript" src="/static/js/connection.js"
+            th:src="@{/js/connection.js}"></script>
+<script src="/static/js/upload.js"
+            th:src="@{/js/upload.js}"></script>           
+<script src="/static/js/drop.js"
+            th:src="@{/js/drop.js}"></script>
+
+<link href="/static/css/drop.css"
+          th:href="@{/css/drop.css}" rel="stylesheet" media="screen"/> 
+<script  type="text/javascript" >
+$(function () {
+		var estimatetime=0;
+		var uploadspeed=0;
+		
+		checkUploadSpeed( 30, function ( speed, average ) {
+			
+			$('input#speed').val(speed).trigger('change');
+			
+		} ); 
+		$('input#speed').change(function(){
+			uploadspeed=$(this).val();
+			
+		});
+		
+		
+	    $("#fileupload").change(function () {
+	    	
+        if (typeof (FileReader) != "undefined") 
+        {
+            var dvPreview = $("#dvPreview");
+            var dvMultiprogressbar=$("div#multiprogressbar");
+            
+            var regex = /^([a-zA-Z0-9\s_\\.\-:()\S])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            document.getElementById( 'count' ).textContent = 'total: ' + $(this)[0].files.length + 'files';
+      			
+            $.each($(this)[0].files,function(key,value){
+            	estimatetime+=(value.size/1024/uploadspeed);
+            	
+            	document.getElementById( 'estimatetime' ).textContent = 'estimate time: ' + getTimeFromSeconds(estimatetime) + 'kbs';
+            	            	
+            });
+            $.each($(this)[0].files,function(key,value){
+            	
+           	
+        	 if(key>100){
+        		 
+        	 }
+        	 else{
+                var file = value;
+                if (regex.test(file.name.toLowerCase())) {
+                	var oMyForm = new FormData();
+              	 	 oMyForm.append("fileupload", file);         	 	
+              	 	             		
+                	var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var img = $("<img />");
+                        img.attr("style", "height:100px;width: 100px");
+                        img.attr("src", e.target.result);
+                        dvPreview.append(img);
+                        var html='<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="'+key+'"></div> </div>'
+                       	dvMultiprogressbar.append(html); 
+                        
+                       	CallAjax(oMyForm,key);
+                       	                       		
+                                            
+                        
+                    }
+                    reader.readAsDataURL(file);
+                   
+                } else {
+                    alert(file.name + " is not a valid image file.");
+                    dvPreview.html("");
+                    return false;
+                }
+        	 }
+            });
+            
+           
+            
+            
+        } 
+        else 
+        {
+            alert("This browser does not support HTML5 FileReader.");
+        }
+       
+});
+});
+</script>
+
+
+</head>
+<body>
+<div id="dvPreview" class="drop">
+Drop in here
+</div>
+<input id="fileupload" type="file" multiple="multiple" accept="image/*"/>
+<hr />
+
+
+ <div id= "multiprogressbar">
+  
+ </div>
+ <div id= "status">
+<div id="estimatetime"></div>
+<div id="count"></div>
+<div id="elapsedtime"></div>
+<input  type="hidden" value="0" id="speed"/>
+
+ </div>
+ 
+</body>
+
+</html>

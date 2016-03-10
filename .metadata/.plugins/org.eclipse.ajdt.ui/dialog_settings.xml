@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewAspectWizardPage">
+		<item value="true" key="create_unimplemented_meth"/>
+		<item value="true" key="create_unimplemented_pc"/>
+		<item value="false" key="create_main"/>
+	</section>
+</section>

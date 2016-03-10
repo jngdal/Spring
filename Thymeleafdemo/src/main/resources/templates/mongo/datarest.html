@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-ng-app="mongoApp">
+<head>
+<meta charset="UTF-8"/>
+<title>Spring data rest with angular js</title>
+<link 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+			th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+			rel="stylesheet" media="screen" />
+<link 	href="http://cdn.jsdelivr.net/webjars/font-awesome/4.5.0/css/font-awesome.css"
+			th:href="@{/webjars/font-awesome/4.5.0/css/font-awesome.css}"
+			rel="stylesheet" media="screen" />			
+			
+<link th:href="@{/css/mongo/style.css}"  rel="stylesheet">
+<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.4.7/angular.js"
+            th:src="@{/webjars/angularjs/1.4.7/angular.js}"></script>
+<script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap.js}"></script>
+
+  <script src="http://cdn.jsdelivr.net/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"
+            th:src="@{/webjars/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js}"></script> 
+
+
+<script src="//static/angularjs/mongo/app.js"
+            th:src="@{/angularjs/mongo/app.js}"></script>
+<script src="//static/angularjs/mongo/controllers.js"
+            th:src="@{/angularjs/mongo/controllers.js}"></script>
+<script src="//static/angularjs/mongo/services.js"
+            th:src="@{/angularjs/mongo/services.js}"></script>
+
+</head>
+<body class="container" data-ng-controller="MongoController">
+
+
+	<script type="text/ng-template" id="myModalContent.html">	
+	
+           <div class="modal-header">
+             <h3 class="modal-title">The lists of tasks which is perepaired clear</h3>
+           </div>
+           <div class="modal-body">
+             <div class="list-group">
+                <a ng-repeat="item in items" class="list-group-item list-group-item-success" href="{{ item._links.self.href }}">
+                     {{ item.taskName }}
+                </a>
+             </div>
+           
+           </div>
+           <div class="modal-footer">
+            <button class="btn btn-success" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
+           </div>
+
+    </script>
+
+
+	<input type="hidden"  th:value="${_csrf.token}" id="csrf"/>	
+	
+	<div class="panel panel-info main" data-ng-show="toggle">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">	  
+	  		<i class="glyphicon glyphicon-th-list"></i>	
+	  		<span>Reccent Task</span> 
+	  		<div class="pull-right" >
+	  			<button class="btn btn-danger btn-xs" data-ng-click="toggle=!toggle">Add New Task</button>
+	  			<button class="btn btn-info btn-xs" data-ng-click="open('sm')">Clear completed tasks</button>
+	  		</div>
+	  </div>
+	  <div class="panel-body">
+	     <!-- Table -->
+	  <table class="table">
+		  <tbody>
+			<tr data-ng-repeat="task in tasks" data-ng-class="{strike:task.taskStatus=='COMPLETED',danger:task.taskPriority=='HIGH',warning:task.taskPriority=='MEDIUM',success:task.taskPriority=='LOW'}">
+		 	<td class="col-md-1">
+		 		<input id="{{task._links.self.href}}" type="checkbox" value="{{task._links.self.href}}" 
+		 		data-ng-checked="task.taskStatus=='COMPLETED'" data-ng-click="addCompletedList(task._links.self.href)" >
+		 		<label for="{{task._links.self.href}}"  ></label>
+		 	</td>
+		 	<td class="col-md-3">
+		 	<p class="text-info">{{task.taskName}}</p>		 	
+		 	</td>
+		 	<td class="col-md-3">
+		 	<p class="text-warning">{{task.taskStatus}}</p>		 	
+		 	</td>
+		 	<td class="col-md-3">
+		 	<p class="text-success">{{task.taskDescription}}</p>		 	
+		 	</td>
+		 	<td class="col-md-2">
+		 	<button type="button" class="btn btn-xs" data-ng-class="{'btn-danger':task.taskPriority=='HIGH','btn-warning':task.taskPriority=='MEDIUM','btn-success':task.taskPriority=='LOW'}">{{task.taskPriority}}</button>	 	
+		 	</td>	
+		 	</tr>
+		 </tbody>
+	  </table>
+	  </div>
+	
+	
+	</div>
+	
+	
+	
+	<div class="panel panel-danger main" data-ng-hide="toggle">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">
+	  <i class="glyphicon glyphicon-plus"></i>	  
+	  <span>Add Task</span> 
+	  <div class="pull-right" >
+	  <button class="btn btn-info btn-xs" data-ng-click="toggle=!toggle">Show All Tasks</button>	  			
+	  </div>
+	  </div>
+	  <div class="panel-body">
+	   
+	    	<form class="form-horizontal" name="taskForm">
+			  <div class="form-group">
+			    <label for="taskName" class="col-sm-4 control-label">Task Name:</label>
+			    <div class="col-sm-6">
+			      <input data-ng-required="true" type="text" class="form-control" id="taskName" placeholder="Task Name" data-ng-model="taskName">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="TaskDescription" class="col-sm-4 control-label">Task Description:</label>
+			    <div class="col-sm-6">
+			      <input data-ng-required="true" type="text" class="form-control" id="TaskDescription" placeholder="Task Description" data-ng-model="taskDescription">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="TaskStatus" class="col-sm-4 control-label">TaskStatus:</label>
+			    <div class="col-sm-6">
+			      <select data-ng-required="true" class="form-control" id="TaskDescription" data-ng-model="taskStatus" data-ng-options="status as status for status in statuses"></select>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="TaskPriority" class="col-sm-4 control-label">TaskPriority:</label>
+			    <div class="col-sm-6">
+			     <select data-ng-required="true" class="form-control" id="TaskPriority"  data-ng-model="taskPriority" data-ng-options="priority as priority for priority in priorities"></select>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <div class="col-sm-offset-5 col-sm-7">
+			      <button data-ng-disabled="taskForm.$invalid" type="submit" class="btn btn-danger" data-ng-click="addNewTask()">Add New Task</button>
+			    </div>
+			  </div>
+			</form>
+	    
+	    
+	  </div>	
+	 
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

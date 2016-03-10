@@ -1,0 +1,6 @@
+{
+   "minlength":"Your name is too short.",
+  "maxlength":"Your name is too long.",
+  "required":"Your name is required." ,
+  "emailpattern":"Your email is invalid" 
+}

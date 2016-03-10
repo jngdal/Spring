@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Spring Framework Guru</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--/*/<th:block th:include="fragments/headerinc :: head"></th:block>/*/-->
+</head>
+<body>
+
+	<div class="container">
+		<div class="container">
+			<div class="jumbotron">
+				<img src="../static/images/FBcover1200x628.png" alt="Smiley face"
+					width="1000" th:src="@{images/FBcover1200x628.png}" />
+				<h1 th:inline="text">
+					[[#{welcome}]] 
+				</h1>
+
+				<h2>Fellow Spring Framework Gurus!!!</h2>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

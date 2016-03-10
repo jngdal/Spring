@@ -1,0 +1,15 @@
+package com.example.repositories;
+
+import java.util.List;
+
+import com.example.domain.DetailUser;
+
+public class StorePrucedureRepositoryIplm implements StorePrucedureRepository {
+
+	@Override
+	public List<DetailUser> allDetailUser(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

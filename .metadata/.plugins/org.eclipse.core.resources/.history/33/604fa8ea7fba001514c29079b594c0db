@@ -1,0 +1,14 @@
+package com.example.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.query.Procedure;
+import org.springframework.data.repository.query.Param;
+
+import com.example.domain.DetailUser;
+
+public interface StorePrucedureRepository {
+	
+	@Procedure(name="DetailUser.findAll")
+	List<DetailUser> allDetailUser(@Param("tablename") String name);
+}

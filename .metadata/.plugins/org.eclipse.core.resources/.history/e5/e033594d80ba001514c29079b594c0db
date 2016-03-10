@@ -1,0 +1,24 @@
+package com.example.repositories;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.StoredProcedureQuery;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.domain.DetailUser;
+
+public class StorePrucedureRepositoryIplm implements StorePrucedureRepository {
+
+	@Autowired
+	EntityManager entityManager;
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<DetailUser> allDetailUser(String name) {
+		StoredProcedureQuery query =entityManager.createStoredProcedureQuery("DetailUser.findAll", DetailUser.class);
+		query.setParameter("tablename", name);
+		return query.getResultList();
+	}
+
+}

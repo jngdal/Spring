@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+div.scroll{
+height:400px;
+overflow-y: scroll;
+overflow-x:none; 	
+}
+
+.self {
+  font-weight: 600;
+}
+
+.sprite { background: url('/images/status.png') no-repeat top left; height: 34px;  } 
+.sprite.connect { background-position: 0 0; width: 37px; } 
+.sprite.disconect { background-position: -38px 0; width: 32px; } 
